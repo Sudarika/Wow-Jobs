@@ -1,0 +1,78 @@
+.user-profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.user-profile-content {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-profile-title {
+    color: #4CAF50;
+}
+
+.user-profile-section {
+    margin-bottom: 30px;
+}
+
+.user-profile-section-title {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.user-profile-info {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile-info p {
+    margin: 5px 0;
+}
+
+.user-profile-skills {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-profile-skills li {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.user-profile-update-btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.user-profile-update-btn:hover {
+    background-color: #45a049;
+}
+
+.user-profile-divider {
+    margin-top: 30px;
+}

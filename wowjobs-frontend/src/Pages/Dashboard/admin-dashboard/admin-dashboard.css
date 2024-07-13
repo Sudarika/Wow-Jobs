@@ -1,0 +1,14 @@
+.Asidebar-text{
+    color: #747474;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.Asidebar-text:hover{
+    color: #0b5dae !important;
+    background-color: #edefff;
+}
+
+.Asidebar-text:active{
+    color: #63dbff !important;
+}
