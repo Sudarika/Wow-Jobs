@@ -1,0 +1,1023 @@
+{
+	"info": {
+		"_postman_id": "d465caac-c1b1-4a56-bfac-4e93c33efd1c",
+		"name": "WOWJobs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26510408"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRhZTVkNmIwNGJmMTliMjVlZGExOCIsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTExMjQzNTgsImV4cCI6MTcxMTEyNzk1OH0.DJwDWYYbvHV2QaL0a3RdCxPsMd8TTAQ4Qmr8zlUsndE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\": \"This is a test post content\",\r\n  \"title\": \"Test Post\",\r\n  \"tags\": [\"tag1\", \"tag2\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/posts/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRhZTVkNmIwNGJmMTliMjVlZGExOCIsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTExMjQzNTgsImV4cCI6MTcxMTEyNzk1OH0.DJwDWYYbvHV2QaL0a3RdCxPsMd8TTAQ4Qmr8zlUsndE"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\": \"Updated post content\",\r\n  \"title\": \"Updated Post Title\",\r\n  \"tags\": [\"updated_tag1\", \"updated_tag2\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/posts/update/65fdb2c52fcef7f04aa25ac5"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRhZTVkNmIwNGJmMTliMjVlZGExOCIsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTExMjQzNTgsImV4cCI6MTcxMTEyNzk1OH0.DJwDWYYbvHV2QaL0a3RdCxPsMd8TTAQ4Qmr8zlUsndE"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8070/api/posts/delete/65fdb2c52fcef7f04aa25ac5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"new_user\",\r\n    \"password\": \"newpassword123\",\r\n    \"email\": \"newuser@example.com\",\r\n    \"profile\": {\r\n        \"firstName\": \"New\",\r\n        \"lastName\": \"User\",\r\n        \"title\": \"Software Developer\",\r\n        \"company\": \"ABC Corp\",\r\n        \"location\": \"City\",\r\n        \"bio\": \"I am a new user.\",\r\n        \"education\": [\r\n            {\r\n                \"institution\": \"University of XYZ\",\r\n                \"degree\": \"Bachelor's\",\r\n                \"fieldOfStudy\": \"Computer Science\",\r\n                \"startYear\": 2018,\r\n                \"endYear\": 2022\r\n            }\r\n        ],\r\n        \"skills\": [\"JavaScript\", \"React\", \"Node.js\"]\r\n    },\r\n    \"contact\": {\r\n        \"phone\": \"1234567890\",\r\n        \"address\": \"123 Main St\",\r\n        \"linkedIn\": \"https://www.linkedin.com/newuser\",\r\n        \"twitter\": \"https://www.twitter.com/newuser\"\r\n    },\r\n    \"userType\": \"user\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "User Login 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"new_user\",\r\n    \"password\": \"newpassword123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDJlNjM0MjdiN2FiOThlNmE1YjlkNSIsInVzZXJuYW1lIjoibmV3X3VzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTE0NzE4NjEsImV4cCI6MTcxMTQ3NTQ2MX0.gcQHca8VhS7oOUXKCHm_5i85SEWwnDPfHzThbAW4i0Y"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/users/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQ2NDliOTk0NzU4Y2NmZGVlNjFiOCIsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTExMjExNzQsImV4cCI6MTcxMTEyNDc3NH0.jNXoiZKrwCvudULuqhD-Sakm07ZqY7EUWfH3vni_L44"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"testuser\",\r\n    \"password\": \"newpassword\",\r\n    \"email\": \"updated@example.com\",\r\n    \"profile\": {\r\n        \"firstName\": \"Updated\",\r\n        \"lastName\": \"User\",\r\n        \"title\": \"Senior Software Engineer\",\r\n        \"company\": \"Updated Company\",\r\n        \"location\": \"Updated City\",\r\n        \"bio\": \"This is an updated bio\",\r\n        \"education\": [],\r\n        \"workExperience\": [],\r\n        \"skills\": [\"Node.js\", \"Express\", \"MongoDB\", \"React\"]\r\n    },\r\n    \"contact\": {\r\n        \"phone\": \"9876543210\",\r\n        \"address\": \"Updated Address\",\r\n        \"linkedIn\": \"https://www.linkedin.com/in/updateduser\",\r\n        \"twitter\": \"https://twitter.com/updateduser\"\r\n    },\r\n    \"userType\": \"user\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/users/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQ2NDliOTk0NzU4Y2NmZGVlNjFiOCIsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTExMjExNzQsImV4cCI6MTcxMTEyNDc3NH0.jNXoiZKrwCvudULuqhD-Sakm07ZqY7EUWfH3vni_L44"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8070/api/users/account"
+					},
+					"response": []
+				},
+				{
+					"name": "Send Req",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDJlNmRlMjdiN2FiOThlNmE1YjlkYSIsInVzZXJuYW1lIjoiYWxpY2Vfc21pdGgiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTE0NzI0NTQsImV4cCI6MTcxMTQ3NjA1NH0.8ivRhRZ4X59U7-3nM7ZUn1H4X9wF7uwfQTuBbTv1NG0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8070/api/users/send-friend-request/6602e63427b7ab98e6a5b9d5"
+					},
+					"response": []
+				},
+				{
+					"name": "Register User 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"alice_smith\",\r\n    \"password\": \"password123\",\r\n    \"email\": \"alice@example.com\",\r\n    \"profile\": {\r\n        \"firstName\": \"Alice\",\r\n        \"lastName\": \"Smith\",\r\n        \"title\": \"Software Engineer\",\r\n        \"company\": \"ABC Corporation\",\r\n        \"location\": \"New York\",\r\n        \"bio\": \"Passionate about coding and technology\",\r\n        \"education\": [\r\n            {\r\n                \"institution\": \"XYZ University\",\r\n                \"degree\": \"Bachelor of Science\",\r\n                \"fieldOfStudy\": \"Computer Science\",\r\n                \"startYear\": 2018,\r\n                \"endYear\": 2022\r\n            }\r\n        ],\r\n        \"skills\": [\"JavaScript\", \"React\", \"Node.js\"]\r\n    },\r\n    \"contact\": {\r\n        \"phone\": \"+1234567890\",\r\n        \"address\": \"123 Main St, New York\",\r\n        \"linkedIn\": \"https://www.linkedin.com/in/alice_smith\",\r\n        \"twitter\": \"https://www.twitter.com/alice_smith\"\r\n    },\r\n    \"userType\": \"user\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "User Login 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"alice_smith\",\r\n    \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Friend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDJlNjM0MjdiN2FiOThlNmE1YjlkNSIsInVzZXJuYW1lIjoibmV3X3VzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTE0NzE1MTcsImV4cCI6MTcxMTQ3NTExN30.yH20Kqnc64Tbjyt0PZaamlmtDaDOE9udg4vR2kMJch8"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"friendId\": \"6602e6de27b7ab98e6a5b9da\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/users/delete-friend"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDJlNjM0MjdiN2FiOThlNmE1YjlkNSIsInVzZXJuYW1lIjoibmV3X3VzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTE1NjczNzQsImV4cCI6MTcxMTU3MDk3NH0.m1ElQNqFchsrpRRmtldt0Eeg1ysa_7GwtsNo4reoqpA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/users/jobs"
+					},
+					"response": []
+				},
+				{
+					"name": "Apply for Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDJlNmRlMjdiN2FiOThlNmE1YjlkYSIsInVzZXJuYW1lIjoiYWxpY2Vfc21pdGgiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTE1NzM3NDEsImV4cCI6MTcxMTU3NzM0MX0.-tfMxDKnZywXZ-qDy55M3KgJ3E8O3dcskEFe5jk98cA"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/users/jobs/6603985e4bdb13c2723f91c3/apply"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Applied Jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDJlNjM0MjdiN2FiOThlNmE1YjlkNSIsInVzZXJuYW1lIjoibmV3X3VzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTE1NjczNzQsImV4cCI6MTcxMTU3MDk3NH0.m1ElQNqFchsrpRRmtldt0Eeg1ysa_7GwtsNo4reoqpA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/users/jobs/applied"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Accepted Jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDJlNjM0MjdiN2FiOThlNmE1YjlkNSIsInVzZXJuYW1lIjoibmV3X3VzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTE1NjczNzQsImV4cCI6MTcxMTU3MDk3NH0.m1ElQNqFchsrpRRmtldt0Eeg1ysa_7GwtsNo4reoqpA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/users/jobs/accepted"
+					},
+					"response": []
+				},
+				{
+					"name": "Rejected Jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDJlNjM0MjdiN2FiOThlNmE1YjlkNSIsInVzZXJuYW1lIjoibmV3X3VzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTE1NjczNzQsImV4cCI6MTcxMTU3MDk3NH0.m1ElQNqFchsrpRRmtldt0Eeg1ysa_7GwtsNo4reoqpA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/users/jobs/rejected"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "Create Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRhZTVkNmIwNGJmMTliMjVlZGExOCIsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTExMjgyNDgsImV4cCI6MTcxMTEzMTg0OH0.RinWEa4ci5oY_GTshwcWT9WupMRi9WLJUF05QBczjZ0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employer\": \"65fdb2a35fd19b9294ef3381\",\r\n    \"title\": \"Software Engineer\",\r\n    \"description\": \"Looking for a skilled software engineer to join our team.\",\r\n    \"requirements\": [\"Bachelor's degree in Computer Science\", \"Experience with JavaScript and Node.js\"],\r\n    \"applicationInstructions\": \"Please send your resume and cover letter to hr@example.com\",\r\n    \"location\": \"Remote\",\r\n    \"industry\": \"Technology\",\r\n    \"jobType\": \"Full-time\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/jobs/create"
+					},
+					"response": []
+				},
+				{
+					"name": "View Jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRhZTVkNmIwNGJmMTliMjVlZGExOCIsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTExMjQzNTgsImV4cCI6MTcxMTEyNzk1OH0.DJwDWYYbvHV2QaL0a3RdCxPsMd8TTAQ4Qmr8zlUsndE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/jobs/view"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRhZTVkNmIwNGJmMTliMjVlZGExOCIsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTExMjQzNTgsImV4cCI6MTcxMTEyNzk1OH0.DJwDWYYbvHV2QaL0a3RdCxPsMd8TTAQ4Qmr8zlUsndE"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employer\": \"65fdb2a35fd19b9294ef3381\",\r\n    \"title\": \"Updated Title\",\r\n    \"description\": \"Updated Description\",\r\n    \"requirements\": [\"Updated Requirement 1\", \"Updated Requirement 2\"],\r\n    \"applicationInstructions\": \"Updated Application Instructions\",\r\n    \"location\": \"Updated Location\",\r\n    \"industry\": \"Updated Industry\",\r\n    \"jobType\": \"Updated Job Type\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/jobs/jobs/65fdb9a898079645a9d5f56b"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRhZTVkNmIwNGJmMTliMjVlZGExOCIsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJ1c2VyVHlwZSI6InVzZXIiLCJpYXQiOjE3MTExMjgxNDQsImV4cCI6MTcxMTEzMTc0NH0.5GUdEzD1NzOZxVylDnZpst5-QiqpwZzbOBG0amStUSw"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8070/api/jobs/delete/65fdb9a898079645a9d5f56b"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Register Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adminName\": \"admin_username\",\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"admin_password\",\r\n    \"userType\": \"admin\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/admins/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"madmin@example.com\",\r\n    \"password\": \"adminPassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/admins/login"
+					},
+					"response": []
+				},
+				{
+					"name": "View all companies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmMzlhMTFhZmJlNTAwODdkNDNiZCIsInVzZXJUeXBlIjoiYWRtaW4iLCJpYXQiOjE3MTExNDIxNDUsImV4cCI6MTcxMTE0NTc0NX0.L2ATkrcJaxGiZ668OuVUqdw2RcZZWLkPClebVLBQxgE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/admins/companies"
+					},
+					"response": []
+				},
+				{
+					"name": "View All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDQwZjg3M2U4ZGJiMDBjZWRlY2Q4YiIsInVzZXJUeXBlIjoiYWRtaW4iLCJpYXQiOjE3MTE1NDU2MzgsImV4cCI6MTcxMTU0OTIzOH0.hiwTQH20igZUPi20NVI2jKTwB6tdlnOTIwQXf_k54w4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/admins/users/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmMzlhMTFhZmJlNTAwODdkNDNiZCIsInVzZXJUeXBlIjoiYWRtaW4iLCJpYXQiOjE3MTE1MzMwODIsImV4cCI6MTcxMTUzNjY4Mn0.wNesfuH3OOCzzKcadV6HxM2YMwviiOUkgs5g3F0SFTE"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8070/api/admins/users/6603ed611d6014dcadb5aee3"
+					},
+					"response": []
+				},
+				{
+					"name": "View All Companies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDQwZjg3M2U4ZGJiMDBjZWRlY2Q4YiIsInVzZXJUeXBlIjoiYWRtaW4iLCJpYXQiOjE3MTE1NDYzMzEsImV4cCI6MTcxMTU0OTkzMX0.-lWeqko_m7BVs6LNez8CwMnJzUVoWzx7wj11KPZtEAM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/admins/companies/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Company By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmMzlhMTFhZmJlNTAwODdkNDNiZCIsInVzZXJUeXBlIjoiYWRtaW4iLCJpYXQiOjE3MTE1MzU0NDgsImV4cCI6MTcxMTUzOTA0OH0.4N76DWsrk9WOoqsBRIyIl8_FQ2PQ8H4TCP-0Y6qYN4s"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8070/api/admins/companies/65fde7973c315b591c9c3163"
+					},
+					"response": []
+				},
+				{
+					"name": "View All Institutes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDQwZjg3M2U4ZGJiMDBjZWRlY2Q4YiIsInVzZXJUeXBlIjoiYWRtaW4iLCJpYXQiOjE3MTE1NDU2MzgsImV4cCI6MTcxMTU0OTIzOH0.hiwTQH20igZUPi20NVI2jKTwB6tdlnOTIwQXf_k54w4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/admins/institutes/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Institute By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmMzlhMTFhZmJlNTAwODdkNDNiZCIsInVzZXJUeXBlIjoiYWRtaW4iLCJpYXQiOjE3MTE1MzM5NDIsImV4cCI6MTcxMTUzNzU0Mn0.fkT8ncond_OAk5Vs49h8rEF_ug5EjfcMUdVLAhxStCI"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8070/api/admins/institutes/65fdfc11ebfa03371818b43f"
+					},
+					"response": []
+				},
+				{
+					"name": "Register Consultant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmMzlhMTFhZmJlNTAwODdkNDNiZCIsInVzZXJUeXBlIjoiYWRtaW4iLCJpYXQiOjE3MTE1MzY5MTMsImV4cCI6MTcxMTU0MDUxM30.WCU4hNobYP5DRMKy-c2tVIglGqevm8l7C3q7MQfWsh0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"password\": \"password123\",\r\n    \"profile\": {\r\n        \"bio\": \"Experienced consultant in various fields\",\r\n        \"expertise\": [\"Marketing\", \"Finance\"],\r\n        \"experience\": [\r\n            {\r\n                \"company\": \"ABC Corp\",\r\n                \"position\": \"Senior Consultant\",\r\n                \"duration\": \"2 years\"\r\n            }\r\n        ]\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/admins/consultants/register"
+					},
+					"response": []
+				},
+				{
+					"name": "View All Consultants",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDQwZjg3M2U4ZGJiMDBjZWRlY2Q4YiIsInVzZXJUeXBlIjoiYWRtaW4iLCJpYXQiOjE3MTE1NDYzMzEsImV4cCI6MTcxMTU0OTkzMX0.-lWeqko_m7BVs6LNez8CwMnJzUVoWzx7wj11KPZtEAM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/admins/consultants/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Consultant by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmMzlhMTFhZmJlNTAwODdkNDNiZCIsInVzZXJUeXBlIjoiYWRtaW4iLCJpYXQiOjE3MTE1MzY5MTMsImV4cCI6MTcxMTU0MDUxM30.WCU4hNobYP5DRMKy-c2tVIglGqevm8l7C3q7MQfWsh0"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8070/api/admins/consultants/6603fb722c090ae907b487fb"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Consultant by ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Create Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExMTM5NjMwLCJleHAiOjE3MTExNDMyMzB9.Ip19tICnv2eM5BY4UPzBojWWw8njrpzLEPq1SAIG0s8"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Job Title\",\r\n    \"description\": \"Job Description\",\r\n    \"requirements\": [\"Requirement 1\", \"Requirement 2\"],\r\n    \"applicationInstructions\": \"Application Instructions\",\r\n    \"location\": \"Job Location\",\r\n    \"industry\": \"Job Industry\",\r\n    \"jobType\": \"Job Type\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/companies/job"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\": \"Test Company1\",\r\n    \"email\": \"testcompany1@example.com\",\r\n    \"password\": \"testpassword\",\r\n    \"profile\": {\r\n        \"description\": \"Test company 1description\",\r\n        \"location\": \"Test location\",\r\n        \"industry\": \"Test industry\",\r\n        \"companySize\": 100,\r\n        \"websiteUrl\": \"https://www.testcompany.com\"\r\n    },\r\n    \"contact\": {\r\n        \"phone\": \"1234567890\",\r\n        \"address\": \"Test Address\",\r\n        \"linkedIn\": \"https://www.linkedin.com/company/testcompany\",\r\n        \"twitter\": \"https://twitter.com/testcompany\"\r\n    },\r\n    \"userType\": \"company\" \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/companies/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Company Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"testcompany1@example.com\",\r\n    \"password\": \"testpassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/companies/login"
+					},
+					"response": []
+				},
+				{
+					"name": "View Applications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExNTcwMDQ0LCJleHAiOjE3MTE1NzM2NDR9.znl2N9YopO613M1I04peC8bSbKr-oOrYyce9PctNuDA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/companies/applications"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Company Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExNTA3MDAyLCJleHAiOjE3MTE1MTA2MDJ9.x3Ll10W_7Y19bs6fr57LTgPaTfO1I5dPguZt7WI6SAI"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Updated description\",\r\n    \"location\": \"Updated location\",\r\n    \"industry\": \"Updated industry\",\r\n    \"companySize\": 100,\r\n    \"websiteUrl\": \"https://www.updatedwebsite.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/companies/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExNTA3MDAyLCJleHAiOjE3MTE1MTA2MDJ9.x3Ll10W_7Y19bs6fr57LTgPaTfO1I5dPguZt7WI6SAI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Software Engineer 4\",\r\n    \"description\": \"We are looking for a skilled software engineer...\",\r\n    \"requirements\": [\"Bachelor's degree in Computer Science\", \"Experience with JavaScript frameworks\"],\r\n    \"applicationInstructions\": \"Please send your resume to hr@example.com\",\r\n    \"location\": \"New York\",\r\n    \"industry\": \"Technology\",\r\n    \"jobType\": \"Full-time\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/companies/jobs"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExNTEwNDk5LCJleHAiOjE3MTE1MTQwOTl9.PWWjSLpZ6rXwksnvDllhowcgTu902uKJ3WPfsmi7DIs"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Senior Software Engineer\",\r\n    \"requirements\": [\"Master's degree in Computer Science\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/companies/jobs/660393a8059bb2bdba444472"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExNTEwNDk5LCJleHAiOjE3MTE1MTQwOTl9.PWWjSLpZ6rXwksnvDllhowcgTu902uKJ3WPfsmi7DIs"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8070/api/companies/jobs/660393a8059bb2bdba444472"
+					},
+					"response": []
+				},
+				{
+					"name": "View Posted Jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExNTcwMDQ0LCJleHAiOjE3MTE1NzM2NDR9.znl2N9YopO613M1I04peC8bSbKr-oOrYyce9PctNuDA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/companies/jobs"
+					},
+					"response": []
+				},
+				{
+					"name": "View Received Job Applications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExNTczMTY5LCJleHAiOjE3MTE1NzY3Njl9.uLXcxYPVoMc5wGZ6d_1TX61j5yD9qOvg9btzUupuWgE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/companies/receivedApplications"
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Job Application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExNTcwMDQ0LCJleHAiOjE3MTE1NzM2NDR9.znl2N9YopO613M1I04peC8bSbKr-oOrYyce9PctNuDA"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8070/api/companies/jobs/6603985e4bdb13c2723f91c3/applications/6602e63427b7ab98e6a5b9d5/accept"
+					},
+					"response": []
+				},
+				{
+					"name": "Reject Job application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExNTcwMDQ0LCJleHAiOjE3MTE1NzM2NDR9.znl2N9YopO613M1I04peC8bSbKr-oOrYyce9PctNuDA"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8070/api/companies/jobs/660393a3059bb2bdba44446e/applications/6602e63427b7ab98e6a5b9d5/reject"
+					},
+					"response": []
+				},
+				{
+					"name": "View Accepted Job Applications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRlYjBlMTVhNzc0MjY4YmY0NzM5OSIsImVtYWlsIjoidGVzdGNvbXBhbnkxQGV4YW1wbGUuY29tIiwidXNlclR5cGUiOiJjb21wYW55IiwiaWF0IjoxNzExNTczMTY5LCJleHAiOjE3MTE1NzY3Njl9.uLXcxYPVoMc5wGZ6d_1TX61j5yD9qOvg9btzUupuWgE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/companies/acceptedApplications"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Institute",
+			"item": [
+				{
+					"name": "Register Institute",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"instituteName\": \"Sample Institute\",\r\n    \"email\": \"sample@institute.com\",\r\n    \"password\": \"password123\",\r\n    \"profile\": {\r\n        \"description\": \"Sample description\",\r\n        \"location\": \"Sample location\",\r\n        \"websiteUrl\": \"http://samplewebsite.com\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/institutes/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login Institute",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"sample@institute.com\",\r\n    \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/institutes/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmYzExZWJmYTAzMzcxODE4YjQzZiIsInVzZXJUeXBlIjoiaW5zdGl0dXRlIiwiaWF0IjoxNzExNTE5NjkxLCJleHAiOjE3MTE1MjMyOTF9.I8D_HhCPRP6WphIjSwyCXO3jwyWuoqlqWQUW-WUuq6w"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Course Title\",\r\n    \"description\": \"Course Description\",\r\n    \"syllabus\": \"Course Syllabus\",\r\n    \"enrollmentCriteria\": \"Enrollment Criteria\",\r\n    \"content\": [\r\n        {\r\n            \"topic\": \"Topic 01\",\r\n            \"url\": \"URL 01\"\r\n        },\r\n        {\r\n            \"topic\": \"Topic 02\",\r\n            \"url\": \"URL 02\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/institutes/course"
+					},
+					"response": []
+				},
+				{
+					"name": "View Courses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmYzExZWJmYTAzMzcxODE4YjQzZiIsInVzZXJUeXBlIjoiaW5zdGl0dXRlIiwiaWF0IjoxNzExNTI2MTk3LCJleHAiOjE3MTE1Mjk3OTd9.R2I8W7adpMXWcxiaKG1yPjlFYCM3Gxjxvn9ApQCOTtk"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/institutes/courses"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmYzExZWJmYTAzMzcxODE4YjQzZiIsInVzZXJUeXBlIjoiaW5zdGl0dXRlIiwiaWF0IjoxNzExNTE5NjkxLCJleHAiOjE3MTE1MjMyOTF9.I8D_HhCPRP6WphIjSwyCXO3jwyWuoqlqWQUW-WUuq6w"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Updated Course Title\",\r\n    \"description\": \"Updated Course Description\",\r\n    \"syllabus\": \"Updated Course Syllabus\",\r\n    \"enrollmentCriteria\": \"Updated Enrollment Criteria\",\r\n    \"content\": [\r\n        {\r\n            \"topic\": \"Updated Topic 01\",\r\n            \"url\": \"Updated URL 01\"\r\n        },\r\n        {\r\n            \"topic\": \"Updated Topic 02\",\r\n            \"url\": \"Updated URL 02\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/institutes/courses/6603b91b245ccd476c790cf7"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmYzExZWJmYTAzMzcxODE4YjQzZiIsInVzZXJUeXBlIjoiaW5zdGl0dXRlIiwiaWF0IjoxNzExNTE5NjkxLCJleHAiOjE3MTE1MjMyOTF9.I8D_HhCPRP6WphIjSwyCXO3jwyWuoqlqWQUW-WUuq6w"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8070/api/institutes/courses/6603b91b245ccd476c790cf7"
+					},
+					"response": []
+				},
+				{
+					"name": "View Institute Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmYzExZWJmYTAzMzcxODE4YjQzZiIsInVzZXJUeXBlIjoiaW5zdGl0dXRlIiwiaWF0IjoxNzExNTMwMjc1LCJleHAiOjE3MTE1MzM4NzV9.eEWX3HEQ72B2Xh96-UR6X2_agX6ACZ7-rIaiRtwvqAg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8070/api/institutes/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmRmYzExZWJmYTAzMzcxODE4YjQzZiIsInVzZXJUeXBlIjoiaW5zdGl0dXRlIiwiaWF0IjoxNzExNTMwMjc1LCJleHAiOjE3MTE1MzM4NzV9.eEWX3HEQ72B2Xh96-UR6X2_agX6ACZ7-rIaiRtwvqAg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"instituteName\": \"Updated Institute Name\",\r\n    \"email\": \"sample@institute.com\",\r\n    \"password\": \"password123\",\r\n    \"profile\": {\r\n        \"description\": \"Updated Description\",\r\n        \"location\": \"Updated Location\",\r\n        \"websiteUrl\": \"http://updatedwebsite.com\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8070/api/institutes/profile"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
