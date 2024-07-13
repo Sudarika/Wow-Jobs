@@ -1,0 +1,14 @@
+.csidebar-text{
+    color: #747474;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.csidebar-text:hover{
+    color: #0b5dae !important;
+    background-color: #edefff;
+}
+
+.csidebar-text:active{
+    color: #63dbff !important;
+}
